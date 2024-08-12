@@ -36,6 +36,7 @@ alias vim='$EDITOR'
 alias ts='~/.config/ml4w/scripts/snapshot.sh'
 alias wifi='nmtui'
 alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
+alias :qa='exit'
 
 # -----------------------------------------------------
 # ML4W Apps
