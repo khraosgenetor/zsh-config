@@ -96,7 +96,11 @@ ewd() {
 }
 
 cwd() {
-  cd "$@" && ewd
+  if [[ -z "$1" ]]; then
+    cd "$1" && ewd
+  else 
+    cd .. && ewd
+  fi
 }
 
 zwd() {
