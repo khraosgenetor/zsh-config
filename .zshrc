@@ -99,7 +99,7 @@ cwd() {
   if [[ -z "$1" ]]; then
     cd "$1" && ewd
   else 
-    cd .. && ewd
+    cd . && ewd
   fi
 }
 
