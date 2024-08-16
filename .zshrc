@@ -104,7 +104,7 @@ cwd() {
 }
 
 zwd() {
-  z "$@" && ewd
+  z "$1" && ewd
 }
 
 fdaily() {
@@ -118,6 +118,11 @@ function gRcc() {
   else
     echo -e "\e[31mInvalid operator\e[0m"
   fi
+}
+
+gSACP ()
+{
+  git add . && git commit -S -m "$1" && git push
 }
 
 # -----------------------------------------------------
