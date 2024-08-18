@@ -121,6 +121,11 @@ gSACP ()
   eval `ssh-agent` && ssh-add ~/.ssh/github_keys && git add . && git commit -S -m "$1" && git push
 }
 
+gACP ()
+{
+  eval `ssh-agent` && ssh-add ~/.ssh/github_keys && git add . && git commit -m "$1" && git push
+}
+
 # -----------------------------------------------------
 # CONSOLE OUTPUTS
 # -----------------------------------------------------
