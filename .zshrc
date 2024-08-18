@@ -96,11 +96,7 @@ ewd() {
 }
 
 cwd() {
-  if [[ -z "$1" ]]; then
     cd "$1" && ewd
-  else 
-    cd . && ewd
-  fi
 }
 
 zwd() {
@@ -122,7 +118,7 @@ function gRcc() {
 
 gSACP ()
 {
-  git add . && git commit -S -m "$1" && git push
+  eval `ssh-agent` && ssh-add ~/.ssh/github_keys && git add . && git commit -S -m "$1" && git push
 }
 
 # -----------------------------------------------------
